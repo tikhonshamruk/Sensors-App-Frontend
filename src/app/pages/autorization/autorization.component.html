@@ -1,0 +1,27 @@
+
+<form action="" class="authorization-form" [formGroup]="myForm"
+(ngSubmit)="onSubmit()">
+   <h1>Cоздать аккаунт</h1>
+   <label for="" class="label-form">
+    Логин
+<input
+    formControlName="name"
+     class="input-form" placeholder="Введите логин">
+</label>
+
+<label for="" class="label-form">
+    Пороль
+    <input type="text" formControlName = "password">
+</label>
+
+<label for="" class="label-form">
+    Email
+    <input type="text" formControlName = "email">
+</label>
+
+<div *ngIf = "message" class="error-message">
+    {{message}}
+</div>
+
+<button class="btn" type="submit">Создать </button>
+</form>

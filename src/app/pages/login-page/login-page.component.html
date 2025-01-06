@@ -1,0 +1,24 @@
+<form action="" class="authorization-form" [formGroup]="myForm"
+(ngSubmit)="onSubmit()">
+   <h1>Авторизация</h1>
+   <label for="" class="label-form">
+    Логин
+<input
+    formControlName="email"
+     class="input-form" placeholder="Введите логин">
+</label>
+
+<label for="" class="label-form">
+    Пороль
+    <input type="text" formControlName = "password">
+</label>
+<button class="btn" type="submit">Войти</button>
+</form>
+
+<div *ngIf = "errorMessage" class="error-message">
+    {{errorMessage}}
+</div>
+
+<button class="btn">
+    <a href="" [routerLink]="['/autorization']">Создать </a>
+</button>
