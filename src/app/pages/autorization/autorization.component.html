@@ -23,5 +23,5 @@
     {{message}}
 </div>
 
-<button class="btn" type="submit">Создать </button>
+<button [style.background-color]="'red'" class="btn" type="submit" [disabled]="isSubmitting$ |async">Создать </button>
 </form>

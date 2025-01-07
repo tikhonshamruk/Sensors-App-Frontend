@@ -1,0 +1,11 @@
+<p>regions works!</p>
+<nav>
+    <ul class="sidebar-menu">
+        <li *ngFor="let item of items">
+            <a class="sidebar-button"
+            [routerLink]="item?.region_id">
+                <span>{{item?.region_name}}</span>
+            </a>
+        </li>
+    </ul>
+</nav>
