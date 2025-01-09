@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthInterface } from './auth.interface';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
+import { RegionsInterface, SensorsInterface } from '../data/interfaces/regions.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class AuthService {
     return this.http.post<AuthInterface>(`http://localhost:8080/auth/sign-in`,payload).pipe(
       tap(value => {
         this.saveToken(value)
+        console.log('Why me not here')
       })
     )
   }
@@ -23,12 +25,16 @@ export class AuthService {
     return this.http.post('http://localhost:8080/auth/sign-up', payload)
   }
 
-  regions(){
-    return this.http.get('http://localhost:8080/regions')
+  getRegions():Observable<RegionsInterface>{
+    return this.http.get<RegionsInterface>('http://localhost:8080/regions')
   }
 
   saveToken(res: AuthInterface) {
     this.token = res.token
     console.log('this.token', this.token)
+  }
+
+  getRegionById(id:string):Observable<SensorsInterface>{
+    return this.http.get<SensorsInterface>(`http://localhost:8080/sensors/query?regionID=${id}`)
   }
 }
