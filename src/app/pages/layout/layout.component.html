@@ -1,6 +1,11 @@
-<p>layout works!</p>
-<button class="btn">
-    <a href="" [routerLink]="['/regions']">Роутеры</a>
-    <h1></h1>
-    <a href="" >Датчики</a>
-</button>
+<div class="button-container">
+    <button class="btn">
+        <a class="btn-link" [routerLink]="['/regions']">Роутеры</a>
+    </button>
+    <button class="btn">
+        <a class="btn-link" [routerLink]="['/sensors']">Датчики</a>
+    </button>
+</div>
+
+
+<canvas #myChart></canvas>

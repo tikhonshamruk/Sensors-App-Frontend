@@ -1,0 +1,64 @@
+/* Общие стили для пагинации */
+.pagination {
+    width: 100%;
+    max-width: 1000px; /* Максимальная ширина пагинации */
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 8px; /* Расстояние между элементами */
+    justify-content: center; /* Центрирование элементов */
+    flex-wrap: wrap; /* Перенос элементов на новую строку при необходимости */
+}
+
+.pagination li {
+    display: flex;
+}
+
+.pagination a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #007BFF; /* Цвет текста */
+    border: 1px solid #007BFF; /* Граница */
+    border-radius: 4px; /* Скругление углов */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+/* Стили для активной страницы */
+.pagination a.active {
+    background-color: #007BFF; /* Фон активной страницы */
+    color: white; /* Цвет текста активной страницы */
+}
+
+/* Стили при наведении */
+.pagination a:hover:not(.active) {
+    background-color: #f0f0f0; /* Фон при наведении */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 4px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .pagination a {
+        padding: 6px 10px; /* Уменьшаем отступы */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 2px; /* Еще больше уменьшаем расстояние между элементами */
+    }
+
+    .pagination a {
+        padding: 4px 8px; /* Еще больше уменьшаем отступы */
+        font-size: 12px; /* Еще больше уменьшаем размер шрифта */
+    }
+
+    .pagination li {
+        flex: 1 1 auto; /* Растягиваем элементы на всю доступную ширину */
+    }
+}

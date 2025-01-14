@@ -1,0 +1,38 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Отступ между кнопками */
+    padding: 20px; /* Отступ вокруг контейнера */
+}
+
+.btn {
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругление углов */
+    padding: 15px 30px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}
+
+.btn-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный текст */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.btn-link:hover {
+    text-decoration: underline; /* Подчеркивание текста при наведении */
+}
+
+canvas {
+    max-width: 600px;
+    max-height: 400px;
+    margin: 20px auto;
+    display: block;
+  }

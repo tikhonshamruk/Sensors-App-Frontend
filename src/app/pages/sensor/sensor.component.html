@@ -1,0 +1,72 @@
+<!-- <div>
+    <h2>Sensor ID: {{ param }}</h2>
+  
+
+    <div class="temperature-summary">
+      <div>
+        <strong>Average Temperature:</strong> {{ temperature_avg }}°C
+      </div>
+      <div>
+        <strong>Max Temperature:</strong> {{ temperature_max }}°C
+      </div>
+      <div>
+        <strong>Min Temperature:</strong> {{ temperature_min }}°C
+      </div>
+    </div>
+  
+
+    <h3>All Readings</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temperature (°C)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reading of data">
+          <td>{{ reading.reading_created_at | date: 'medium' }}</td>
+          <td>{{ reading.reading_temperature }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+  <div>
+    <h2>Sensor ID: {{ param }}</h2>
+  
+    <!-- Отображение temperature_avg, temperature_max, temperature_min -->
+    <div class="temperature-summary">
+      <div>
+        <strong>Average Temperature:</strong> {{ temperature_avg }}°C
+      </div>
+      <div>
+        <strong>Max Temperature:</strong> {{ temperature_max }}°C
+      </div>
+      <div>
+        <strong>Min Temperature:</strong> {{ temperature_min }}°C
+      </div>
+    </div>
+  
+    <!-- График -->
+    <h3>Temperature Chart</h3>
+    <div class="chart-container">
+      <canvas id="temperatureChart"></canvas>
+    </div>
+  
+    <!-- Таблица для отображения данных readings -->
+    <h3>All Readings</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temperature (°C)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reading of data">
+          <td>{{ reading.reading_created_at | date: 'medium' }}</td>
+          <td>{{ reading.reading_temperature }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

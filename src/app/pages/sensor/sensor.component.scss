@@ -1,0 +1,39 @@
+.temperature-summary {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .temperature-summary div {
+    margin: 5px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .chart-container {
+    margin-top: 20px;
+    position: relative;
+    height: 400px; // Высота графика
+    width: 100%;
+  }

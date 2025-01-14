@@ -1,0 +1,17 @@
+<div class="sensors-container">
+    <h1>Сенсоры</h1>
+  
+    <div class="sensor-list">
+      <div *ngFor="let sensor of data" class="sensor-preview">
+        <a [routerLink]="['/sensor', sensor?.sensor_id]" class="sensor-link">
+          <div class="sensor-name">{{ sensor?.sensor_name }}</div>
+          <div class="sensor-coordinates">
+            <span>Долгота: {{ sensor?.sensor_longitude }}</span>
+            <span>Широта: {{ sensor?.sensor_latitude }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <app-pagination [url]="baseUrl" [currentPage]="currentPage"></app-pagination>
+  </div>

@@ -20,7 +20,6 @@ export class RegionsComponent implements OnInit{
  
     data: Region[] = []
 ngOnInit(): void {
-    console.log('all here be')
     this.authService.getRegions().pipe(
         tap((response: RegionsInterface)=>{
             this.data = response.regions

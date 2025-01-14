@@ -1,3 +1,4 @@
+<div class="bod">
 <form action="" class="authorization-form" [formGroup]="myForm"
 (ngSubmit)="onSubmit()">
    <h1>Авторизация</h1>
@@ -18,7 +19,7 @@
 <div *ngIf = "errorMessage" class="error-message">
     {{errorMessage}}
 </div>
-
+</div>
 <button class="btn">
     <a href="" [routerLink]="['/autorization']">Создать </a>
 </button>

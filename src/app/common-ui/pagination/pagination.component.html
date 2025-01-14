@@ -1,0 +1,11 @@
+<ul class="pagination">
+    <li *ngFor="let page of pages">
+        <a 
+            [routerLink]="['/sensors']" 
+            [queryParams]="{ page: page }" 
+            [ngClass]="{ active: currentPage === page }"
+        >
+            {{ page }}
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,71 @@
+/* Основной стиль для формы */
+.authorization-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Заголовок формы */
+.authorization-form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стиль для меток */
+.label-form {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Стиль для полей ввода */
+.input-form {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input-form:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для кнопки */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+/* Отключенная кнопка */
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
