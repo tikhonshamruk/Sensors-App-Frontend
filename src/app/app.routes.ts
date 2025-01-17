@@ -6,6 +6,8 @@ import { AutorizationComponent } from './pages/autorization/autorization.compone
 import { QueryRegionComponent } from './common-ui/query-region/query-region.component';
 import { SensorsComponent } from './pages/sensors/sensors.component';
 import { SensorComponent } from './pages/sensor/sensor.component';
+import { AddSensorComponent } from './pages/add-sensor/add-sensor.component';
+import { authGuard } from './auth/acces.quard';
 
 export const routes: Routes = [
     {
@@ -16,5 +18,6 @@ export const routes: Routes = [
     {path: 'regions',component: RegionsComponent }, 
     {path: 'region/:id', component: QueryRegionComponent},
     {path: 'sensors', component: SensorsComponent},
-    {path: 'sensor/:id', component: SensorComponent}
+    {path: 'sensor/:id', component: SensorComponent},
+    {path: 'add', component: AddSensorComponent}
 ];

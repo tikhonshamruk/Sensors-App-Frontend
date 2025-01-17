@@ -1,40 +1,22 @@
-<!-- <div>
-    <h2>Sensor ID: {{ param }}</h2>
-  
+<div class="sensors-container">
+  <form action="" class="sensor-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="" class="label-form">
+      Выберите начальную дату:
+      <input formControlName="start" type="datetime-local" id="datetime" name="date" />
+    </label>
 
-    <div class="temperature-summary">
-      <div>
-        <strong>Average Temperature:</strong> {{ temperature_avg }}°C
-      </div>
-      <div>
-        <strong>Max Temperature:</strong> {{ temperature_max }}°C
-      </div>
-      <div>
-        <strong>Min Temperature:</strong> {{ temperature_min }}°C
-      </div>
-    </div>
-  
+    <label for="" class="label-form">
+      Выберите конечную дату:
+      <input type="datetime-local" id="datetime" formControlName="end" />
+    </label>
+    <button class="btn" type="submit">Войти</button>
+  </form>
 
-    <h3>All Readings</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Temperature (°C)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let reading of data">
-          <td>{{ reading.reading_created_at | date: 'medium' }}</td>
-          <td>{{ reading.reading_temperature }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+  <button class="btn" (click)="refreshData()">Обновить данные</button>
+
   <div>
     <h2>Sensor ID: {{ param }}</h2>
-  
-    <!-- Отображение temperature_avg, temperature_max, temperature_min -->
+
     <div class="temperature-summary">
       <div>
         <strong>Average Temperature:</strong> {{ temperature_avg }}°C
@@ -46,16 +28,14 @@
         <strong>Min Temperature:</strong> {{ temperature_min }}°C
       </div>
     </div>
-  
-    <!-- График -->
+
     <h3>Temperature Chart</h3>
     <div class="chart-container">
       <canvas id="temperatureChart"></canvas>
     </div>
-  
-    <!-- Таблица для отображения данных readings -->
+
     <h3>All Readings</h3>
-    <table>
+    <table class="readings-table">
       <thead>
         <tr>
           <th>Date</th>
@@ -70,3 +50,4 @@
       </tbody>
     </table>
   </div>
+</div>

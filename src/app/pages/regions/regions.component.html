@@ -1,6 +1,9 @@
-<div class="regions-list">
+<div class="regions-container">
+  <h1>Список регионов</h1>
+  <div class="regions-list">
     <app-region-card
       *ngFor="let region of data"
       [region]="region">
     </app-region-card>
+  </div>
 </div>

@@ -22,12 +22,7 @@ export class SensorsComponent implements OnInit {
       }
       data: Sensor[] = []
   ngOnInit(): void {
-  
-    // this.authService.getSensors(1).pipe(
-    //         tap((response: Sensor[])=>{
-    //           this.data = response
-    //         })
-    //     ).subscribe(); 
+
 
         this.baseUrl= this.router.url.split("?")[0]
 

@@ -1,71 +1,87 @@
-/* Основной стиль для формы */
-.authorization-form {
-    max-width: 400px;
-    margin: 50px auto;
+.authorization-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Форма авторизации */
+  .authorization-form {
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-}
-
-/* Заголовок формы */
-.authorization-form h1 {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  /* Заголовок формы */
+  .authorization-form h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-}
-
-/* Стиль для меток */
-.label-form {
+  }
+  
+  /* Стили для label */
+  .label-form {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
     color: #555;
-}
-
-/* Стиль для полей ввода */
-.input-form {
+  }
+  
+  /* Стили для input */
+  .input-form {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s;
-}
-
-.input-form:focus {
+  }
+  
+  .input-form:focus {
     border-color: #007bff;
     outline: none;
-}
-
-/* Сообщение об ошибке */
-.error-message {
+  }
+  
+  /* Сообщение об ошибке */
+  .error-message {
     color: red;
+    text-align: center;
+    margin-top: 15px;
     font-size: 14px;
-    margin-bottom: 20px;
-}
-
-/* Стиль для кнопки */
-.btn {
+  }
+  
+  /* Стили для кнопки */
+  .btn {
     width: 100%;
     padding: 10px;
     background-color: red;
     color: white;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.btn:hover {
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
     background-color: darkred;
-}
-
-/* Отключенная кнопка */
-.btn:disabled {
+  }
+  
+  /* Отключенная кнопка */
+  .btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
-}
+  }

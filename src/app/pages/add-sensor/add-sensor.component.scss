@@ -1,0 +1,118 @@
+.sensors-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Заголовок */
+  .sensors-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Стили для формы */
+  .authorization-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Стили для меток */
+  .label-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Стили для полей ввода */
+  .input-form,
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-form:focus,
+  .search-input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Стили для кнопки */
+  .btn {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Стили для выпадающего списка */
+  select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Стили для блока добавленных данных */
+  .added-data {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .added-data h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .reading-item {
+    margin-bottom: 15px;
+  }
+  
+  .reading-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .reading-item p strong {
+    color: #333;
+  }
+  
+  .reading-item hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+  }

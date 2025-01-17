@@ -1,4 +1,19 @@
-.regions-list {
+.regions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Заголовок */
+  .regions-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Список регионов */
+  .regions-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Центрирование карточек */
@@ -7,18 +22,39 @@
     background-color: #f9f9f9; /* Фоновый цвет */
     border-radius: 8px; /* Закругление углов */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
-}
-
-app-region-card {
+  }
+  
+  /* Карточка региона */
+  app-region-card {
     background-color: #fff; /* Фоновый цвет карточки */
     border: 1px solid #ddd; /* Рамка карточки */
     border-radius: 8px; /* Закругление углов карточки */
     padding: 15px; /* Внутренние отступы */
     width: 300px; /* Ширина карточки */
-    transition: transform 0.2s; /* Плавный переход при наведении */
-}
-
-app-region-card:hover {
+    transition: transform 0.2s, box-shadow 0.3s ease; /* Плавный переход при наведении */
+  }
+  
+  app-region-card:hover {
     transform: translateY(-5px); /* Подъем карточки при наведении */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Увеличенная тень при наведении */
-}
+  }
+  
+  /* Название региона */
+  .region-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* Дополнительная информация о регионе */
+  .region-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #555;
+  }
+  
+  .region-info span {
+    font-size: 14px;
+  }

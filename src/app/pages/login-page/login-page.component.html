@@ -1,4 +1,4 @@
-<div class="bod">
+<!-- <div class="bod">
 <form action="" class="authorization-form" [formGroup]="myForm"
 (ngSubmit)="onSubmit()">
    <h1>Авторизация</h1>
@@ -22,4 +22,39 @@
 </div>
 <button class="btn">
     <a href="" [routerLink]="['/autorization']">Создать </a>
-</button>
+</button> -->
+
+
+<div class="authorization-container">
+    <form action="" class="authorization-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <h1>Авторизация</h1>
+      <label for="" class="label-form">
+        Email
+        <input
+          formControlName="email"
+          class="input-form"
+          placeholder="Введите логин"
+        />
+      </label>
+  
+      <label for="" class="label-form">
+        Пароль
+        <input
+          type="password"
+          formControlName="password"
+          class="input-form"
+          placeholder="Введите пароль"
+        />
+      </label>
+      <button class="btn" type="submit">Войти</button>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+    
+      <button class="btn">
+        <a href="" [routerLink]="['/autorization']">Создать аккаунт</a>
+      </button>
+    </form>
+  
+    
+  </div>

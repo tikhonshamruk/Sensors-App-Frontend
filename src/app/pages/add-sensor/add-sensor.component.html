@@ -1,0 +1,62 @@
+
+
+<div class="sensors-container">
+  <select [(ngModel)]="selectedSensor" (change)="onSensorSelect()">
+    <option *ngFor="let sensor of data" [ngValue]="sensor">
+      {{ sensor.sensor_name }}
+    </option>
+  </select>
+
+  <!-- Форма для ввода данных -->
+  <form action="" class="authorization-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label class="label-form">
+      Сенсор
+      <input
+        type="text"
+        [(ngModel)]="inputValue"
+        placeholder="Выбранный сенсор"
+        class="search-input"
+        formControlName="sensors"
+      />
+    </label>
+
+    <label for="" class="label-form">
+      Температура
+      <input
+        type="number"
+        formControlName="temp"
+        class="input-form"
+        placeholder="Введите temp"
+      />
+    </label>
+
+    <label for="" class="label-form">
+      Дата
+      <input
+        type="datetime-local"
+        formControlName="date"
+        class="input-form"
+        placeholder="Введите date"
+      />
+    </label>
+
+    <button
+      [style.background-color]="'red'"
+      class="btn"
+      type="submit"
+    >
+      Создать
+    </button>
+  </form>
+
+  <!-- Отображение всех добавленных данных -->
+  <div *ngIf="sensorReadings.length > 0" class="added-data">
+    <h3>Добавленные данные:</h3>
+    <div *ngFor="let reading of sensorReadings" class="reading-item">
+      <p><strong>Сенсор ID:</strong> {{ reading.sensor }}</p>
+      <p><strong>Температура:</strong> {{ reading.readings[0].reading_temperature }}</p>
+      <p><strong>Дата:</strong> {{ reading.readings[0].reading_created_at }}</p>
+      <hr>
+    </div>
+  </div>
+</div>

@@ -33,6 +33,10 @@ export class AuthService {
     return this.http.post('http://localhost:8080/auth/sign-up', payload)
   }
 
+  logOut(payload:string){
+    return this.http.post('http://localhost:8080/auth/log-out',payload)
+  }
+
   getRegions():Observable<RegionsInterface>{
     return this.http.get<RegionsInterface>('http://localhost:8080/regions')
   }
@@ -43,15 +47,24 @@ export class AuthService {
   }
 
   getRegionById(id:string):Observable<SensorsInterface>{
-    return this.http.get<SensorsInterface>(`http://localhost:8080/sensors/query?regionID=${id}`)
+    // return this.http.get<SensorsInterface>(`http://localhost:8080/sensors/query?regionID=${id}`)
+    return this.http.get<SensorsInterface>(`http://localhost:8080/regions/${id}/sensors`)
   }
 
   getSensors(page: number):Observable<Sensor[]>{
     return this.http.get<Sensor[]>(`http://localhost:8080/sensors?page=${page}&limit=10`)
   }
 
+  addSensors():Observable<Sensor[]>{
+    return this.http.get<Sensor[]>(`http://localhost:8080/sensors?page=1&limit=295`)
+  }
+
   getSensor(id:string):Observable<Read>{
     return this.http.get<Read>(`http://localhost:8080/sensors/alt/${id}/readings`)
+  }
+
+  getChangeSensor(id:string,start:number, end:number):Observable<Read>{
+    return this.http.get<Read>(`http://localhost:8080/sensors/alt/${id}/readings?start-date=${start}:00Z&end-date=${end}:00Z`)
   }
 
 }

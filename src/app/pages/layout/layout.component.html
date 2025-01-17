@@ -1,11 +1,20 @@
-<div class="button-container">
-    <button class="btn">
-        <a class="btn-link" [routerLink]="['/regions']">Роутеры</a>
-    </button>
-    <button class="btn">
-        <a class="btn-link" [routerLink]="['/sensors']">Датчики</a>
-    </button>
-</div>
+<div class="authorization-container">
+    <div class="authorization-form">  
+      <div class="button-container">
+        <button class="btn">
+          <a class="btn-link" [routerLink]="['/regions']">Роутеры</a>
+        </button>
+        <button class="btn">
+          <a class="btn-link" [routerLink]="['/sensors']">Датчики</a>
+        </button>
+        <button class="btn">
+          <a class="btn-link" [routerLink]="['/add']">Добавить</a>
+        </button>
+        <button class="btn" (click)="onLogout()">
+          <a class="btn-link">Выйти из аккаунт</a>
+        </button>
+      </div>
+    </div>
 
-
-<canvas #myChart></canvas>
+    
+  </div>

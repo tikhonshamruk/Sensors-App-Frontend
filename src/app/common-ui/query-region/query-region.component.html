@@ -1,5 +1,11 @@
-<div *ngFor="let sensor of data">
-    <h1>{{ sensor.sensor_name }}</h1>
-    <h1>{{ sensor.sensor_longitude}}</h1>
-    <h1>{{ sensor.sensor_latitude}}</h1>
-</div>
+<div class="sensors-container">
+    <div class="sensor-list">
+      <div *ngFor="let sensor of data" class="sensor-preview">
+        <div class="sensor-name">{{ sensor.sensor_name }}</div>
+        <div class="sensor-coordinates">
+          <span>Долгота: {{ sensor.sensor_longitude }}</span>
+          <span>Широта: {{ sensor.sensor_latitude }}</span>
+        </div>
+      </div>
+    </div>
+  </div>

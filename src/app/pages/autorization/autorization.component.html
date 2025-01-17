@@ -1,27 +1,47 @@
-
-<form action="" class="authorization-form" [formGroup]="myForm"
-(ngSubmit)="onSubmit()">
-   <h1>Cоздать аккаунт</h1>
-   <label for="" class="label-form">
-    Логин
-<input
-    formControlName="name"
-     class="input-form" placeholder="Введите логин">
-</label>
-
-<label for="" class="label-form">
-    Пороль
-    <input type="text" formControlName = "password">
-</label>
-
-<label for="" class="label-form">
-    Email
-    <input type="text" formControlName = "email">
-</label>
-
-<div *ngIf = "message" class="error-message">
-    {{message}}
-</div>
-
-<button [style.background-color]="'red'" class="btn" type="submit" [disabled]="isSubmitting$ |async">Создать </button>
-</form>
+<div class="authorization-container">
+    <form action="" class="authorization-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <h1>Создать аккаунт</h1>
+  
+      <label for="" class="label-form">
+        Логин
+        <input
+          formControlName="name"
+          class="input-form"
+          placeholder="Введите логин"
+        />
+      </label>
+  
+      <label for="" class="label-form">
+        Пароль
+        <input
+          type="password"
+          formControlName="password"
+          class="input-form"
+          placeholder="Введите пароль"
+        />
+      </label>
+  
+      <label for="" class="label-form">
+        Email
+        <input
+          type="email"
+          formControlName="email"
+          class="input-form"
+          placeholder="Введите email"
+        />
+      </label>
+  
+      <div *ngIf="message" class="error-message">
+        {{ message }}
+      </div>
+  
+      <button
+        [style.background-color]="'red'"
+        class="btn"
+        type="submit"
+        [disabled]="isSubmitting$ | async"
+      >
+        Создать
+      </button>
+    </form>
+  </div>
